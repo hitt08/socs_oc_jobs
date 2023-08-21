@@ -158,7 +158,7 @@ done
 if [ $BREAK -eq 0 ];then
 
     #JOB NAME
-	meta_name=`echo $DIR | awk -F "/" '{print $NF}'`"-"`echo $CMD | cut -d "" -f1 | cut -d "." -f1 `
+	meta_name=`basename $DIR`"-"`echo $CMD | cut -d "" -f1 | cut -d "." -f1 `
 	if [[ ${NAME} != "" ]];then
 		meta_name="${meta_name}-${NAME}"
 	fi
